@@ -30,6 +30,5 @@ namespace SaxessDB
             context.SaveChanges();
         }
 
-
     }
 }
