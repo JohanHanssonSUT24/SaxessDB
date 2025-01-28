@@ -19,6 +19,7 @@ namespace SaxessDB
                 Console.WriteLine("[3] Lägg till behandling");
                 Console.WriteLine("[4] Prislista");
                 Console.WriteLine("[5] Avsluta program");
+                Console.WriteLine();
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
