@@ -25,6 +25,7 @@ namespace SaxessDB
                 {
                     case "1":
                         //Method for Bookings
+                        DataManager.AddBooking(context);
                         break;
                     case "2":
                         //Method for staff
