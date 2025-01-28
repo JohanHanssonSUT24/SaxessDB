@@ -15,7 +15,7 @@ namespace SaxessDB
     {
         public static void AddMember(SaxessDbContext context)
         {
-            
+
             Console.WriteLine("--ADD NEW TREATMENT--");
             Console.WriteLine("Type in name of treatment: ");
             string treatmentName = Console.ReadLine();
@@ -29,6 +29,15 @@ namespace SaxessDB
             context.Treatments.Add(newTreatment);
             context.SaveChanges();
         }
-
+        public static void Prices(SaxessDbContext context)
+        {
+            IQueryable<Treatment> treatment = context.Treatments;
+            var prices = treatment.ToList();
+            foreach (var treat in treatment)
+            {
+                Console.WriteLine($"{treat.Type} - {treat.Price}");
+            }
+            Console.WriteLine();
+        }
     }
 }
