@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using SaxessDB.Models;
 
-namespace SaxessDB.Models;
+namespace SaxessDB.Data;
 
 public partial class SaxessDbContext : DbContext
 {
