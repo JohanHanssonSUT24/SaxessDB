@@ -8,6 +8,7 @@ using Microsoft.Data.SqlClient;
 using SaxessDB.Data;
 using SaxessDB.Models;
 
+
 namespace SaxessDB
 {
     public class DataManager
@@ -15,7 +16,6 @@ namespace SaxessDB
         public static void AddMember(SaxessDbContext context)
         {
             
-
             Console.WriteLine("--ADD NEW TREATMENT--");
             Console.WriteLine("Type in name of treatment: ");
             string treatmentName = Console.ReadLine();
@@ -29,6 +29,7 @@ namespace SaxessDB
             context.Treatments.Add(newTreatment);
             context.SaveChanges();
         }
+
 
     }
 }
