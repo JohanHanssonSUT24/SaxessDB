@@ -1,10 +1,15 @@
-﻿namespace SaxessDB
+﻿using SaxessDB.Data;
+using SaxessDB.Models;
+
+namespace SaxessDB
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            using var context = new SaxessDbContext();
             bool menuBool = true;
+           
 
             while (menuBool)
             {
@@ -26,6 +31,8 @@
                         break;
                     case "3":
                         //Add treatment
+                        Treatment treatment1 = new Treatment();
+                        DataManager.AddMember(context);
                         break;
                     case "4":
                         //Prices
