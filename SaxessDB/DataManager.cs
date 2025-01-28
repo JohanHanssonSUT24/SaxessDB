@@ -39,5 +39,23 @@ namespace SaxessDB
             }
             Console.WriteLine();
         }
+        public static void AddBooking(SaxessDbContext context)
+        {
+            //using (var context = new SaxessDbContext())
+            
+
+                Console.WriteLine("Vilken dag vill du boka: (yyyy-mm-dd) ");
+                DateTime addBookingTime = Convert.ToDateTime(Console.ReadLine());
+
+                var newBooking = new Booking
+                {
+                    TimeSlot = addBookingTime
+                };
+
+                context.Bookings.Add(newBooking);
+                context.SaveChanges();
+                Console.WriteLine("Bokning tillagd!");
+            
+        }
     }
 }
