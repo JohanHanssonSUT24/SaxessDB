@@ -30,5 +30,16 @@ namespace SaxessDB
             context.SaveChanges();
         }
 
+        public static void Prices(SaxessDbContext context)
+        {
+            IQueryable<Treatment> treatment = context.Treatments;
+            var prices = treatment.ToList();
+            foreach (var treat in treatment)
+            {
+                Console.WriteLine($"{treat.Type} - {treat.Price}");
+            }
+            Console.WriteLine();
+        }
+
     }
 }

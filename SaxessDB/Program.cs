@@ -30,11 +30,11 @@ namespace SaxessDB
                         break;
                     case "3":
                         //Add treatment
-                        Treatment treatment1 = new Treatment();
                         DataManager.AddMember(context);
                         break;
                     case "4":
                         //Prices
+                        DataManager.Prices(context);
                         break;
                     case "5":
                         menuBool = false;
